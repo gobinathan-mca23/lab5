@@ -1,0 +1,57 @@
+4.Countdown
+
+<?xml version="1.0"?>
+<wml>
+<card id="start" title="Countdown">
+<p>Get ready for the countdown!<br/>
+<anchor>Start<go href="#t5"/></anchor>
+</p>
+</card>
+
+<card id="t5" title="Countdown">
+<timer value="30"/>
+<p>5...</p>
+<onevent type="ontimer">
+    <go href="#t4"/>
+</onevent>
+</card>
+
+<card id="t4" title="Countdown">
+<timer value="30"/>
+<p>4...</p>
+<onevent type="ontimer">
+    <go href="#t3"/>
+</onevent>
+</card>
+
+<card id="t3" title="Countdown">
+<timer value="30"/>
+<p>3...</p>
+<onevent type="ontimer">
+    <go href="#t2"/>
+</onevent>
+</card>
+
+<card id="t2" title="Countdown">
+<timer value="30"/>
+<p>2...</p>
+<onevent type="ontimer">
+    <go href="#t1"/>
+</onevent>
+</card>
+
+<card id="t1" title="Countdown">
+<timer value="30"/>
+<p>1...</p>
+<onevent type="ontimer">
+    <go href="#celebrate"/>
+</onevent>
+</card>
+
+<card id="celebrate" title="Hooray!">
+<p> Congratulations! <br/>
+The countdown is complete!<br/>
+<anchor>Restart<go href="#start"/></anchor>
+</p>
+</card>
+</wml>

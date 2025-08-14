@@ -1,0 +1,25 @@
+1.LED on/off
+
+ 
+
+from machine import Pin
+
+led = Pin(15, Pin.OUT)
+
+#function to turn the led on
+
+def led_on():
+
+    led.on()
+
+    print("LED is ON")
+
+#function to turn the led off
+
+def led_off():
+
+    led.off()
+
+    print("LED is OFF")
+
+print("Type 'led_on()' to turn on the LED and 'led_off()' to turn off the LED.")

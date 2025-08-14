@@ -1,0 +1,25 @@
+2.Blinking
+
+from machine import Pin
+
+import time
+
+ 
+
+led=Pin(15,Pin.OUT)
+
+ 
+
+while True:
+
+    print("LED is ON") #turns on
+
+    led.on() #calling on()
+
+    time.sleep(1) #waits 1s
+
+    print("LED is OFF") #turns off
+
+    led.off() #calling off()
+
+    time.sleep(1) #waits 1s

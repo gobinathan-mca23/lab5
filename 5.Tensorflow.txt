@@ -1,0 +1,23 @@
+import tensorflow as tf
+
+a = tf.Variable(5.0, name="a")
+
+b = tf.Variable(3.0, name="b")
+
+@tf.function
+
+def compute():
+
+ return a * b + 2
+
+result = compute()
+
+print("Result of a * b + 2:", result.numpy())
+
+a.assign(10.0)
+
+print("Updated a to 10.0")
+
+result = compute()
+
+print("New result of a * b + 2:", result.numpy())
